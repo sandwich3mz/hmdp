@@ -1,0 +1,163 @@
+2023-05-23 10:07:57 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 10:07:57 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 10:16:37 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 10:16:37 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 10:33:07 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 10:33:07 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 10:45:24 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 10:45:24 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 10:46:41 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 10:46:41 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 10:46:47 [pg_impl.go]-[QueryVoucherOfShop]-[59][36m [INFO] [0ment: invalid field "stock" for query
+2023-05-23 10:46:47 [pg_impl.go]-[QueryVoucherOfShop]-[62][36m [INFO] [0m[]
+2023-05-23 10:47:48 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 10:47:48 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 10:47:56 [pg_impl.go]-[QueryVoucherOfShop]-[59][36m [INFO] [0ment: invalid field "stock" for query
+2023-05-23 10:47:56 [pg_impl.go]-[QueryVoucherOfShop]-[62][36m [INFO] [0m[]
+2023-05-23 10:52:53 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 10:52:53 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 10:54:00 [pg_impl.go]-[QueryVoucherOfShop]-[60][36m [INFO] [0m[SeckillVoucher(id=3, stock=99, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Sat Apr  1 17:06:07 2023, update_time=Tue Apr  4 18:08:06 2023) SeckillVoucher(id=4, stock=100, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Wed Apr  5 16:37:50 2023, update_time=Wed Apr  5 16:37:50 2023) SeckillVoucher(id=5, stock=98, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Thu Apr  6 15:45:37 2023, update_time=Fri Apr  7 12:58:39 2023)]
+2023-05-23 11:05:22 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 11:05:22 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 11:09:29 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 11:09:29 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 11:09:33 [pg_impl.go]-[QueryVoucherOfShop]-[57][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 11:10:46 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 11:10:46 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 11:10:48 [pg_impl.go]-[QueryVoucherOfShop]-[57][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 11:35:37 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 11:35:37 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 11:35:39 [pg_impl.go]-[QueryVoucherOfShop]-[61][36m [INFO] [0ment: invalid field "stock" for query
+2023-05-23 11:36:47 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 11:36:47 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 11:50:13 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 11:50:14 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 11:51:20 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 11:51:20 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 11:52:16 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 11:52:16 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 11:52:20 [pg_impl.go]-[QueryVoucherOfShop]-[48][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 11:52:20 [pg_impl.go]-[QueryVoucherOfShop]-[51][36m [INFO] [0m[]
+2023-05-23 11:53:50 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 11:53:51 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 11:55:50 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 11:55:50 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 11:55:53 [pg_impl.go]-[QueryVoucherOfShop]-[47][36m [INFO] [0ment: invalid field "stock" for query
+2023-05-23 12:06:59 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 12:06:59 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 12:07:03 [pg_impl.go]-[QueryVoucherOfShop]-[47][36m [INFO] [0ment: invalid field "begin_time" for query
+2023-05-23 12:09:04 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 12:09:04 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 12:09:17 [pg_impl.go]-[QueryVoucherOfShop]-[47][36m [INFO] [0ment: invalid field "begin_time" for query
+2023-05-23 12:10:07 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 12:10:07 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 12:10:10 [pg_impl.go]-[QueryVoucherOfShop]-[47][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_voucher.stock' in 'field list'
+2023-05-23 12:12:28 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 12:12:28 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 12:12:45 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 12:12:45 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 12:12:49 [pg_impl.go]-[QueryVoucherOfShop]-[47][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_voucher.stock' in 'field list'
+2023-05-23 12:13:12 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 12:13:12 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 12:13:15 [pg_impl.go]-[QueryVoucherOfShop]-[47][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_voucher.stock' in 'field list'
+2023-05-23 12:14:08 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 12:14:08 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 12:14:17 [pg_impl.go]-[QueryVoucherOfShop]-[44][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_voucher.stock' in 'field list'
+2023-05-23 12:19:00 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 12:19:00 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 12:51:23 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 12:51:23 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 12:51:27 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 12:56:07 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 12:56:07 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 14:27:24 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 14:27:24 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 14:27:40 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_info' in 'field list'
+2023-05-23 14:28:23 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 14:28:23 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 14:28:23 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_info' in 'field list'
+2023-05-23 14:28:39 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_info' in 'field list'
+2023-05-23 14:28:50 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 14:28:50 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 14:28:52 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 14:37:41 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 14:37:41 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 14:59:17 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 14:59:17 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 15:01:32 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 15:01:32 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 15:01:37 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1146 (42S02): Table 'hmdp.seckill_vouchers' doesn't exist
+2023-05-23 18:18:47 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 18:18:47 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 18:18:50 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1146 (42S02): Table 'hmdp.seckill_vouchers' doesn't exist
+2023-05-23 18:19:35 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 18:19:35 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 18:19:38 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 18:24:38 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 18:24:38 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 18:24:40 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_seckill' in 'field list'
+2023-05-23 18:25:10 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 18:25:10 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 18:25:10 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_info' in 'field list'
+2023-05-23 18:25:45 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 18:25:45 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 18:26:05 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_seckill' in 'field list'
+2023-05-23 18:26:33 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 18:26:33 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 18:26:35 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 19:25:29 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 19:25:39 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 19:57:22 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 19:57:22 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 19:57:25 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 20:10:11 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 20:10:11 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 20:10:23 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_info' in 'field list'
+2023-05-23 20:22:20 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 20:22:20 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 20:22:41 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_info' in 'field list'
+2023-05-23 20:23:13 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 20:23:13 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 20:23:16 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_info' in 'field list'
+2023-05-23 20:23:52 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 20:23:52 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 20:23:59 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 20:42:54 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 20:42:54 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 20:42:58 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 't1.id' in 'on clause'
+2023-05-23 20:56:30 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 20:56:30 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 20:56:32 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 't1.id' in 'on clause'
+2023-05-23 20:57:20 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 20:57:20 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 20:58:06 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 20:58:06 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 20:59:57 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 20:59:57 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 21:00:17 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 21:00:17 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 21:00:21 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_get_more' in 'field list'
+2023-05-23 21:01:13 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 21:01:13 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 21:18:04 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 21:18:04 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 21:18:06 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_get_more' in 'field list'
+2023-05-23 21:19:16 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 21:19:16 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 21:19:37 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 21:19:37 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 21:19:41 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 21:26:14 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 21:26:14 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 21:26:19 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mError 1054 (42S22): Unknown column 't1.id' in 'on clause'
+2023-05-23 21:28:05 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 21:28:05 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 21:28:07 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 21:30:41 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 21:30:41 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 21:31:08 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 21:38:53 [pg_impl.go]-[QueryVoucherOfShop]-[45][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-23 22:39:10 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 22:39:10 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-23 23:10:20 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-23 23:10:20 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local

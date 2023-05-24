@@ -1,0 +1,60 @@
+2023-05-15 20:22:39 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 20:22:39 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:22:39 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:22:39 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:22:39 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:30:42 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 20:30:42 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:30:42 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:30:42 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:30:42 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:31:27 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 20:31:27 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:31:27 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:31:27 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:31:27 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:31:53 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 20:31:53 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:31:53 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:31:53 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 20:31:53 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 22:05:26 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 22:05:27 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 22:05:27 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 22:05:27 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 22:05:27 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:21:49 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 23:21:49 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:21:49 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:21:49 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:21:49 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:30:46 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 23:30:46 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:30:46 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:30:46 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:30:46 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:31:33 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 23:31:33 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:31:33 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:31:33 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:31:33 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:33:20 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 23:33:20 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:33:20 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:33:20 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:33:20 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:33:54 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 23:33:54 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:33:54 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:33:54 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:33:54 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:35:02 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 23:35:02 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:35:02 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:35:02 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:35:02 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:40:14 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-15 23:40:14 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:40:14 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:40:14 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-15 23:40:14 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local

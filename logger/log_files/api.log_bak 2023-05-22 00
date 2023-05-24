@@ -1,0 +1,69 @@
+2023-05-22 17:07:19 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 17:07:19 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 17:08:32 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 17:08:32 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 17:18:10 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 17:18:10 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 17:18:26 [pg_impl.go]-[QueryVoucherOfShop]-[29][37m [DEBUG] [0m[]
+2023-05-22 17:18:42 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 17:18:42 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 17:19:02 [pg_impl.go]-[QueryVoucherOfShop]-[29][37m [DEBUG] [0m[]
+2023-05-22 19:38:37 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 19:38:37 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 19:38:40 [pg_impl.go]-[QueryVoucherOfShop]-[29][37m [DEBUG] [0m[]
+2023-05-22 19:38:52 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 19:38:52 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 19:39:11 [pg_impl.go]-[QueryVoucherOfShop]-[29][37m [DEBUG] [0m[]
+2023-05-22 19:40:00 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 19:40:00 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 19:51:00 [pg_impl.go]-[QueryVoucherOfShop]-[30][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-22 19:51:00 [pg_impl.go]-[QueryVoucherOfShop]-[32][36m [INFO] [0m[]
+2023-05-22 19:51:03 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 19:51:03 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 19:54:01 [pg_impl.go]-[QueryVoucherOfShop]-[30][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-22 19:54:01 [pg_impl.go]-[QueryVoucherOfShop]-[32][36m [INFO] [0m[]
+2023-05-22 19:54:05 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 19:54:05 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 20:06:11 [pg_impl.go]-[QueryVoucherOfShop]-[30][36m [INFO] [0mforeign-key "voucher_id" is nil for node 3
+2023-05-22 20:06:11 [pg_impl.go]-[QueryVoucherOfShop]-[32][36m [INFO] [0m[]
+2023-05-22 20:06:42 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 20:06:42 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 20:07:48 [pg_impl.go]-[QueryVoucherOfShop]-[38][36m [INFO] [0m[SeckillVoucher(id=3, stock=99, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Sat Apr  1 17:06:07 2023, update_time=Tue Apr  4 18:08:06 2023) SeckillVoucher(id=4, stock=100, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Wed Apr  5 16:37:50 2023, update_time=Wed Apr  5 16:37:50 2023) SeckillVoucher(id=5, stock=98, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Thu Apr  6 15:45:37 2023, update_time=Fri Apr  7 12:58:39 2023)]
+2023-05-22 20:09:28 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 20:09:28 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 20:31:48 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 20:31:48 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 20:35:57 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 20:35:57 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 20:36:02 [pg_impl.go]-[QueryVoucherOfShop]-[36][36m [INFO] [0m[SeckillVoucher(id=3, stock=99, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Sat Apr  1 17:06:07 2023, update_time=Tue Apr  4 18:08:06 2023) SeckillVoucher(id=4, stock=100, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Wed Apr  5 16:37:50 2023, update_time=Wed Apr  5 16:37:50 2023) SeckillVoucher(id=5, stock=98, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Thu Apr  6 15:45:37 2023, update_time=Fri Apr  7 12:58:39 2023)]
+2023-05-22 20:36:02 [pg_impl.go]-[QueryVoucherOfShop]-[36][36m [INFO] [0m[SeckillVoucher(id=3, stock=99, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Sat Apr  1 17:06:07 2023, update_time=Tue Apr  4 18:08:06 2023) SeckillVoucher(id=4, stock=100, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Wed Apr  5 16:37:50 2023, update_time=Wed Apr  5 16:37:50 2023) SeckillVoucher(id=5, stock=98, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Thu Apr  6 15:45:37 2023, update_time=Fri Apr  7 12:58:39 2023)]
+2023-05-22 20:37:38 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 20:37:38 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 20:37:42 [pg_impl.go]-[QueryVoucherOfShop]-[36][36m [INFO] [0m[]
+2023-05-22 20:37:55 [pg_impl.go]-[QueryVoucherOfShop]-[36][36m [INFO] [0m[]
+2023-05-22 20:38:39 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 20:38:39 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 20:38:42 [pg_impl.go]-[QueryVoucherOfShop]-[37][36m [INFO] [0ment: invalid field "shop_id" for query
+2023-05-22 20:38:42 [pg_impl.go]-[QueryVoucherOfShop]-[40][36m [INFO] [0m[]
+2023-05-22 20:39:03 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 20:39:03 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 20:39:07 [pg_impl.go]-[QueryVoucherOfShop]-[37][36m [INFO] [0ment: invalid field "pay_value" for query
+2023-05-22 20:39:07 [pg_impl.go]-[QueryVoucherOfShop]-[40][36m [INFO] [0m[]
+2023-05-22 20:44:54 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 20:44:54 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 20:44:58 [pg_impl.go]-[QueryVoucherOfShop]-[40][36m [INFO] [0m[SeckillVoucher(id=3, stock=99, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Sat Apr  1 17:06:07 2023, update_time=Tue Apr  4 18:08:06 2023) SeckillVoucher(id=4, stock=100, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Wed Apr  5 16:37:50 2023, update_time=Wed Apr  5 16:37:50 2023) SeckillVoucher(id=5, stock=98, begin_time=Wed Jan 25 10:09:17 2023, end_time=Wed Apr 26 12:09:04 2023, create_time=Thu Apr  6 15:45:37 2023, update_time=Fri Apr  7 12:58:39 2023)]
+2023-05-22 20:46:02 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 20:46:02 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 20:46:05 [pg_impl.go]-[QueryVoucherOfShop]-[40][36m [INFO] [0m[Voucher(id=3, shop_id=1, title=100元代金券, sub_title=周一至周五均可使用, rules=全场通用\n无需预约\n可无限叠加\不兑现、不找零\n仅限堂食, pay_value=8000, actual_value=10000, type=1, status=1, create_time=Sat Apr  1 17:06:07 2023, update_time=Sat Apr  1 17:06:07 2023) Voucher(id=4, shop_id=1, title=100元代金券, sub_title=周一至周五均可使用, rules=全场通用\n无需预约\n可无限叠加\不兑现、不找零\n仅限堂食, pay_value=8000, actual_value=10000, type=1, status=1, create_time=Wed Apr  5 16:37:50 2023, update_time=Wed Apr  5 16:37:50 2023) Voucher(id=5, shop_id=1, title=100元代金券, sub_title=周一至周五均可使用, rules=全场通用\n无需预约\n可无限叠加\不兑现、不找零\n仅限堂食, pay_value=8000, actual_value=10000, type=1, status=1, create_time=Thu Apr  6 15:45:37 2023, update_time=Thu Apr  6 15:45:37 2023)]
+2023-05-22 21:04:18 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 21:04:18 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 21:11:09 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 21:11:09 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 22:52:45 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 22:52:45 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 23:08:56 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 23:08:56 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 23:12:04 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 23:12:04 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-22 23:20:51 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-22 23:20:51 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
