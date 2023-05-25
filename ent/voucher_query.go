@@ -298,7 +298,7 @@ func (vq *VoucherQuery) WithGetMore(opts ...func(*SeckillVoucherQuery)) *Voucher
 // Example:
 //
 //	var v []struct {
-//		ShopID uint64 `json:"shop_id,omitempty"`
+//		ShopID uint64 `json:"shopId, omitempty"`
 //		Count int `json:"count,omitempty"`
 //	}
 //
@@ -321,7 +321,7 @@ func (vq *VoucherQuery) GroupBy(field string, fields ...string) *VoucherGroupBy 
 // Example:
 //
 //	var v []struct {
-//		ShopID uint64 `json:"shop_id,omitempty"`
+//		ShopID uint64 `json:"shopId, omitempty"`
 //	}
 //
 //	client.Voucher.Query().

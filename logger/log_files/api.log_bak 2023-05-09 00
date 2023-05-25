@@ -1,4 +1,0 @@
-2023-05-09 20:38:29 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
-2023-05-09 20:38:29 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
-2023-05-09 20:38:29 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
-2023-05-09 20:38:29 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local

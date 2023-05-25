@@ -15,12 +15,12 @@ type Voucher struct {
 func (Voucher) Fields() []ent.Field {
 	return []ent.Field{
 		field.Uint64("id").Comment("主键"),
-		field.Uint64("shop_id").Comment("商铺id"),
+		field.Uint64("shop_id").Comment("商铺id").StructTag(`json:"shopId, omitempty"`),
 		field.String("title").Comment("代金券标题"),
-		field.String("sub_title").Comment("副标题"),
+		field.String("sub_title").Comment("副标题").StructTag(`json:"subTitle,omitempty"`),
 		field.String("rules").Comment("使用规则"),
-		field.Uint64("pay_value").Comment("支付金额"),
-		field.Int64("actual_value").Comment("抵扣金额"),
+		field.Uint64("pay_value").Comment("支付金额").StructTag(`json:"payValue,omitempty"`),
+		field.Int64("actual_value").Comment("抵扣金额").StructTag(`json:"actualValue,omitempty"`),
 		field.Int8("type").Comment("优惠券类型"),
 		field.Int8("status").Comment("优惠券类型"),
 		field.Time("create_time").Comment("创建时间"),
@@ -31,8 +31,6 @@ func (Voucher) Fields() []ent.Field {
 func (Voucher) Edges() []ent.Edge {
 	return []ent.Edge{
 		edge.To("getMore", SeckillVoucher.Type),
-		// 指定seckill_voucher中的列
-		//StorageKey(edge.Column("voucher_id")),
 	}
 }
 

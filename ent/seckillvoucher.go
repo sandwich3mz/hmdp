@@ -24,9 +24,9 @@ type SeckillVoucher struct {
 	// 库存
 	Stock uint64 `json:"stock,omitempty"`
 	// 生效时间
-	BeginTime time.Time `json:"begin_time,omitempty"`
+	BeginTime time.Time `json:"beginTime,omitempty"`
 	// 失效时间
-	EndTime time.Time `json:"end_time,omitempty"`
+	EndTime time.Time `json:"endTime,omitempty"`
 	// 创建时间
 	CreateTime time.Time `json:"create_time,omitempty"`
 	// 更新时间

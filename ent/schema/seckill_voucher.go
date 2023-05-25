@@ -17,8 +17,8 @@ func (SeckillVoucher) Fields() []ent.Field {
 		field.Uint64("id").Comment("主键").Unique(),
 		field.Uint64("voucher_id").Comment("优惠券id"),
 		field.Uint64("stock").Comment("库存"),
-		field.Time("begin_time").Comment("生效时间"),
-		field.Time("end_time").Comment("失效时间"),
+		field.Time("begin_time").Comment("生效时间").StructTag(`json:"beginTime,omitempty"`),
+		field.Time("end_time").Comment("失效时间").StructTag(`json:"endTime,omitempty"`),
 		field.Time("create_time").Comment("创建时间"),
 		field.Time("update_time").Comment("更新时间"),
 	}

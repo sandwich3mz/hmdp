@@ -2,9 +2,9 @@ package voucher_service
 
 import (
 	"context"
-	"hmdp/ent"
+	"hmdp/model"
 )
 
 type Repository interface {
-	QueryVoucherOfShop(ctx context.Context, shopId uint64) (res []*ent.Voucher)
+	QueryVoucherOfShop(ctx context.Context, shopId uint64) (res []*model.Voucher)
 }

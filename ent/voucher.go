@@ -19,17 +19,17 @@ type Voucher struct {
 	// 主键
 	ID uint64 `json:"id,omitempty"`
 	// 商铺id
-	ShopID uint64 `json:"shop_id,omitempty"`
+	ShopID uint64 `json:"shopId, omitempty"`
 	// 代金券标题
 	Title string `json:"title,omitempty"`
 	// 副标题
-	SubTitle string `json:"sub_title,omitempty"`
+	SubTitle string `json:"subTitle,omitempty"`
 	// 使用规则
 	Rules string `json:"rules,omitempty"`
 	// 支付金额
-	PayValue uint64 `json:"pay_value,omitempty"`
+	PayValue uint64 `json:"payValue,omitempty"`
 	// 抵扣金额
-	ActualValue int64 `json:"actual_value,omitempty"`
+	ActualValue int64 `json:"actualValue,omitempty"`
 	// 优惠券类型
 	Type int8 `json:"type,omitempty"`
 	// 优惠券类型
