@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"hmdp/config"
 	"hmdp/controllers"
+	"log"
 )
 
 func setupRouter() *gin.Engine {
@@ -39,7 +40,8 @@ func setupRouter() *gin.Engine {
 // RunServer 启动服务器
 func RunServer() {
 	ginServer := setupRouter()
-	//ginServer.LoadHTMLGlob("templates/*")
-	//ginServer.Use(middleware.LoggerMiddleware())
-	ginServer.Run(":" + config.Conf.App.Port)
+	err := ginServer.Run(":" + config.Conf.App.Port)
+	if err != nil {
+		log.Printf("Failed to run the ginServer: %v", err)
+	}
 }

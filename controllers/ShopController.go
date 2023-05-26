@@ -4,12 +4,16 @@ import (
 	"github.com/gin-gonic/gin"
 	"hmdp/common"
 	"hmdp/services"
+	"log"
 	"strconv"
 )
 
 func QueryShopById(ctx *gin.Context) {
 	id := ctx.Param("id")
-	shop := services.ShopRepository.QueryShopById(ctx, id)
+	shop, err := services.ShopRepository.QueryShopById(ctx, id)
+	if err != nil {
+		log.Printf("Failed to query: %v", err)
+	}
 	common.ResponseSuccess(ctx, shop)
 }
 
