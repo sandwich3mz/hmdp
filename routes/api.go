@@ -32,6 +32,8 @@ func setupRouter() *gin.Engine {
 	voucher := router.Group("/voucher")
 	{
 		voucher.GET("/list/:shopId", controllers.QueryVoucherOfShop)
+		voucher.POST("/", controllers.AddVoucher)
+		voucher.POST("/seckill", controllers.AddSeckillVoucher)
 	}
 
 	return router

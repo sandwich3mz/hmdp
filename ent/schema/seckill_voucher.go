@@ -14,7 +14,7 @@ type SeckillVoucher struct {
 
 func (SeckillVoucher) Fields() []ent.Field {
 	return []ent.Field{
-		field.Uint64("id").Comment("主键").Unique(),
+		field.Uint64("id").Comment("主键"),
 		field.Uint64("voucher_id").Comment("优惠券id"),
 		field.Uint64("stock").Comment("库存"),
 		field.Time("begin_time").Comment("生效时间").StructTag(`json:"beginTime,omitempty"`),

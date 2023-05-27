@@ -6,6 +6,7 @@ import (
 	"entgo.io/ent/schema"
 	"entgo.io/ent/schema/edge"
 	"entgo.io/ent/schema/field"
+	"time"
 )
 
 type Voucher struct {
@@ -23,8 +24,8 @@ func (Voucher) Fields() []ent.Field {
 		field.Int64("actual_value").Comment("抵扣金额").StructTag(`json:"actualValue,omitempty"`),
 		field.Int8("type").Comment("优惠券类型"),
 		field.Int8("status").Comment("优惠券类型"),
-		field.Time("create_time").Comment("创建时间"),
-		field.Time("update_time").Comment("更新时间"),
+		field.Time("create_time").Comment("创建时间").Default(time.Now()),
+		field.Time("update_time").Comment("更新时间").Default(time.Now()),
 	}
 }
 

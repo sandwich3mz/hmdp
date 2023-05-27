@@ -42,9 +42,9 @@ func (p *pgImpl) SendCode(ctx context.Context, phone string) {
 
 	client.Set(
 		ctx,
-		tools.LOGIN_CODE_KEY+phone,
+		tools.LoginCodeKey+phone,
 		code,
-		tools.LOGIN_CODE_TTL*time.Minute,
+		tools.LoginCodeTtl*time.Minute,
 	)
 
 	log.Println("验证码:" + strconv.Itoa(code))
@@ -54,7 +54,7 @@ func (p *pgImpl) SendCode(ctx context.Context, phone string) {
 func (p *pgImpl) Login(ctx context.Context, loginForm dto.LoginFormDTO) string {
 	client := global.App.Redis
 	phone := loginForm.Phone
-	cacheCode, _ := client.Get(ctx, tools.LOGIN_CODE_KEY+phone).Result()
+	cacheCode, _ := client.Get(ctx, tools.LoginCodeKey+phone).Result()
 	code := loginForm.Code
 	if cacheCode == "" || code != cacheCode {
 		//不一致：报错
@@ -79,14 +79,14 @@ func (p *pgImpl) Login(ctx context.Context, loginForm dto.LoginFormDTO) string {
 	_ = mapstructure.Decode(global.UserDTO, &hash)
 	// 存储
 	ctx = context.Background()
-	tokenKey := tools.LOGIN_USER_KEY + token
+	tokenKey := tools.LoginUserKey + token
 	client.Del(ctx, tokenKey)
 	client.HMSet(
 		ctx,
 		tokenKey,
 		hash,
 	)
-	client.Expire(ctx, tokenKey, tools.LOGIN_USER_TTL*time.Minute)
+	client.Expire(ctx, tokenKey, tools.LoginUserTtl*time.Minute)
 	return token
 }
 

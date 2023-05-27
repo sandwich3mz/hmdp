@@ -8,6 +8,8 @@ import (
 	"hmdp/ent/shop"
 	"hmdp/ent/shoptype"
 	"hmdp/ent/user"
+	"hmdp/ent/voucher"
+	"time"
 )
 
 // The init function reads all schema descriptors with runtime code
@@ -38,4 +40,14 @@ func init() {
 	userDescID := userFields[0].Descriptor()
 	// user.IDValidator is a validator for the "id" field. It is called by the builders before save.
 	user.IDValidator = userDescID.Validators[0].(func(uint64) error)
+	voucherFields := schema.Voucher{}.Fields()
+	_ = voucherFields
+	// voucherDescCreateTime is the schema descriptor for create_time field.
+	voucherDescCreateTime := voucherFields[9].Descriptor()
+	// voucher.DefaultCreateTime holds the default value on creation for the create_time field.
+	voucher.DefaultCreateTime = voucherDescCreateTime.Default.(time.Time)
+	// voucherDescUpdateTime is the schema descriptor for update_time field.
+	voucherDescUpdateTime := voucherFields[10].Descriptor()
+	// voucher.DefaultUpdateTime holds the default value on creation for the update_time field.
+	voucher.DefaultUpdateTime = voucherDescUpdateTime.Default.(time.Time)
 }

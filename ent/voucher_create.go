@@ -75,9 +75,25 @@ func (vc *VoucherCreate) SetCreateTime(t time.Time) *VoucherCreate {
 	return vc
 }
 
+// SetNillableCreateTime sets the "create_time" field if the given value is not nil.
+func (vc *VoucherCreate) SetNillableCreateTime(t *time.Time) *VoucherCreate {
+	if t != nil {
+		vc.SetCreateTime(*t)
+	}
+	return vc
+}
+
 // SetUpdateTime sets the "update_time" field.
 func (vc *VoucherCreate) SetUpdateTime(t time.Time) *VoucherCreate {
 	vc.mutation.SetUpdateTime(t)
+	return vc
+}
+
+// SetNillableUpdateTime sets the "update_time" field if the given value is not nil.
+func (vc *VoucherCreate) SetNillableUpdateTime(t *time.Time) *VoucherCreate {
+	if t != nil {
+		vc.SetUpdateTime(*t)
+	}
 	return vc
 }
 
@@ -109,6 +125,7 @@ func (vc *VoucherCreate) Mutation() *VoucherMutation {
 
 // Save creates the Voucher in the database.
 func (vc *VoucherCreate) Save(ctx context.Context) (*Voucher, error) {
+	vc.defaults()
 	return withHooks(ctx, vc.sqlSave, vc.mutation, vc.hooks)
 }
 
@@ -131,6 +148,18 @@ func (vc *VoucherCreate) Exec(ctx context.Context) error {
 func (vc *VoucherCreate) ExecX(ctx context.Context) {
 	if err := vc.Exec(ctx); err != nil {
 		panic(err)
+	}
+}
+
+// defaults sets the default values of the builder before save.
+func (vc *VoucherCreate) defaults() {
+	if _, ok := vc.mutation.CreateTime(); !ok {
+		v := voucher.DefaultCreateTime
+		vc.mutation.SetCreateTime(v)
+	}
+	if _, ok := vc.mutation.UpdateTime(); !ok {
+		v := voucher.DefaultUpdateTime
+		vc.mutation.SetUpdateTime(v)
 	}
 }
 
@@ -271,6 +300,7 @@ func (vcb *VoucherCreateBulk) Save(ctx context.Context) ([]*Voucher, error) {
 	for i := range vcb.builders {
 		func(i int, root context.Context) {
 			builder := vcb.builders[i]
+			builder.defaults()
 			var mut Mutator = MutateFunc(func(ctx context.Context, m Mutation) (Value, error) {
 				mutation, ok := m.(*VoucherMutation)
 				if !ok {

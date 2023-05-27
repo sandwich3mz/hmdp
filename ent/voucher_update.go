@@ -118,9 +118,25 @@ func (vu *VoucherUpdate) SetCreateTime(t time.Time) *VoucherUpdate {
 	return vu
 }
 
+// SetNillableCreateTime sets the "create_time" field if the given value is not nil.
+func (vu *VoucherUpdate) SetNillableCreateTime(t *time.Time) *VoucherUpdate {
+	if t != nil {
+		vu.SetCreateTime(*t)
+	}
+	return vu
+}
+
 // SetUpdateTime sets the "update_time" field.
 func (vu *VoucherUpdate) SetUpdateTime(t time.Time) *VoucherUpdate {
 	vu.mutation.SetUpdateTime(t)
+	return vu
+}
+
+// SetNillableUpdateTime sets the "update_time" field if the given value is not nil.
+func (vu *VoucherUpdate) SetNillableUpdateTime(t *time.Time) *VoucherUpdate {
+	if t != nil {
+		vu.SetUpdateTime(*t)
+	}
 	return vu
 }
 
@@ -400,9 +416,25 @@ func (vuo *VoucherUpdateOne) SetCreateTime(t time.Time) *VoucherUpdateOne {
 	return vuo
 }
 
+// SetNillableCreateTime sets the "create_time" field if the given value is not nil.
+func (vuo *VoucherUpdateOne) SetNillableCreateTime(t *time.Time) *VoucherUpdateOne {
+	if t != nil {
+		vuo.SetCreateTime(*t)
+	}
+	return vuo
+}
+
 // SetUpdateTime sets the "update_time" field.
 func (vuo *VoucherUpdateOne) SetUpdateTime(t time.Time) *VoucherUpdateOne {
 	vuo.mutation.SetUpdateTime(t)
+	return vuo
+}
+
+// SetNillableUpdateTime sets the "update_time" field if the given value is not nil.
+func (vuo *VoucherUpdateOne) SetNillableUpdateTime(t *time.Time) *VoucherUpdateOne {
+	if t != nil {
+		vuo.SetUpdateTime(*t)
+	}
 	return vuo
 }
 

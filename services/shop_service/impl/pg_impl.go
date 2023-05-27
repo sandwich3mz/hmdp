@@ -33,7 +33,7 @@ func (p *pgImpl) QueryShopById(ctx context.Context, id string) (*ent.Shop, error
 // 缓存空值解决缓存穿透
 func (p *pgImpl) queryWithPassThrough(ctx context.Context, id string) (*ent.Shop, error) {
 	client := global.App.Redis
-	key := tools.CACHE_SHOP_KEY + id
+	key := tools.CacheShopKey + id
 
 	// 查询缓存
 	shopJson, err := client.Get(context.Background(), key).Result()
@@ -44,7 +44,7 @@ func (p *pgImpl) queryWithPassThrough(ctx context.Context, id string) (*ent.Shop
 	}
 	var qShop *ent.Shop
 	if shopJson != "" {
-		if err := json.Unmarshal([]byte(shopJson), qShop); err != nil {
+		if err := json.Unmarshal([]byte(shopJson), &qShop); err != nil {
 			log.Printf("Failed to unmarshal qShop from Redis: %v", err)
 		}
 		return qShop, nil
@@ -60,14 +60,14 @@ func (p *pgImpl) queryWithPassThrough(ctx context.Context, id string) (*ent.Shop
 		Only(context.Background())
 	if err != nil {
 		// 缓存空值 解决缓存穿透
-		client.Set(context.Background(), key, nil, tools.CACHE_SHOP_TTL*time.Second)
+		client.Set(context.Background(), key, nil, tools.CacheShopTtl*time.Second)
 		log.Printf("Failed to query qShop from database: %v", err)
 		return nil, err
 	}
 
 	qShopBytes, err := json.Marshal(qShop)
 	// 缓存到redis
-	_, err = client.Set(context.Background(), key, qShopBytes, tools.CACHE_SHOP_TTL*time.Minute).Result()
+	_, err = client.Set(context.Background(), key, qShopBytes, tools.CacheShopTtl*time.Minute).Result()
 	if err != nil {
 		log.Printf("Failed to set qShop to redis: %v", err)
 	}
@@ -76,7 +76,7 @@ func (p *pgImpl) queryWithPassThrough(ctx context.Context, id string) (*ent.Shop
 
 // 互斥锁解决缓存击穿
 func (p *pgImpl) queryWithMutex(ctx context.Context, id string) (*ent.Shop, error) {
-	key := tools.CACHE_SHOP_KEY + id
+	key := tools.CacheShopKey + id
 	client := global.App.Redis
 	// 查询店铺缓存
 	shopJson, err := client.Get(context.Background(), key).Result()
@@ -100,7 +100,7 @@ func (p *pgImpl) queryWithMutex(ctx context.Context, id string) (*ent.Shop, erro
 
 	// 缓存不存在 实现缓存重构
 	// 获取互斥锁
-	lockKey := tools.LOCK_SHOP_KEY + id
+	lockKey := tools.LockShopKey + id
 	isLock := tools.TryLock(ctx, lockKey)
 	// 获取互斥锁失败
 	if !isLock {
@@ -115,7 +115,7 @@ func (p *pgImpl) queryWithMutex(ctx context.Context, id string) (*ent.Shop, erro
 		Only(context.Background())
 	// 不存在, 返回空值
 	if res == nil {
-		client.Set(context.Background(), key, nil, tools.CACHE_NULL_TTL*time.Minute)
+		client.Set(context.Background(), key, nil, tools.CacheNullTtl*time.Minute)
 		return nil, nil
 	}
 
@@ -123,14 +123,14 @@ func (p *pgImpl) queryWithMutex(ctx context.Context, id string) (*ent.Shop, erro
 	// 序列化
 	marshal, _ := json.Marshal(res)
 	// 保存到redis
-	client.Set(context.Background(), key, marshal, tools.CACHE_SHOP_TTL*time.Minute)
+	client.Set(context.Background(), key, marshal, tools.CacheShopTtl*time.Minute)
 	defer tools.UnLock(key)
 	return res, nil
 }
 
-// 使用逻辑过滤解决缓存击穿
+// 使用逻辑过期解决缓存击穿
 func (p *pgImpl) queryWithLogicalExpire(ctx context.Context, id string) (*ent.Shop, error) {
-	key := tools.CACHE_SHOP_KEY + id
+	key := tools.CacheShopKey + id
 	client := global.App.Redis
 	// 查询缓存
 	shopJson, err := client.Get(ctx, key).Result()
@@ -164,7 +164,7 @@ func (p *pgImpl) queryWithLogicalExpire(ctx context.Context, id string) (*ent.Sh
 	}
 
 	// 已过期，进行缓存重建
-	lockKey := tools.LOCK_SHOP_KEY + id
+	lockKey := tools.LockShopKey + id
 	isLock := tools.TryLock(ctx, lockKey)
 	// 判断是否获取锁成功
 	if isLock {
@@ -197,7 +197,7 @@ func (p *pgImpl) saveShop2Redis(ctx context.Context, id int64, expireSeconds int
 	redisData.Data = shopJson
 	redisData.ExpireTime = time.Now().Add(time.Duration(expireSeconds) * time.Second)
 	keyID := strconv.Itoa(int(id))
-	key := tools.CACHE_SHOP_KEY + keyID
+	key := tools.CacheShopKey + keyID
 	marshal, _ := json.Marshal(redisData)
 	client.Set(ctx, key, marshal, -1)
 }

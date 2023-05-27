@@ -5,8 +5,6 @@ import (
 	"github.com/go-redis/redis/v8"
 	"github.com/sirupsen/logrus"
 	"hmdp/config"
-	"hmdp/global"
-	"time"
 )
 
 func InitializeRedis() *redis.Client {
@@ -23,26 +21,4 @@ func InitializeRedis() *redis.Client {
 		return nil
 	}
 	return client
-}
-
-const (
-	COUNT_BITS      = 32
-	BEGIN_TIMESTAMP = 1640995200
-)
-
-func NextId(keyPrefix string) uint64 {
-	client := global.App.Redis
-	// 生成时间戳
-	now := time.Now()
-	nowSecond := now.Unix()
-	timestamp := nowSecond - BEGIN_TIMESTAMP
-
-	// 生成序列号
-	// 获取日期
-	date := now.Format("2006:01:02")
-	// 自增
-	ctx := context.Background()
-	count, _ := client.Incr(ctx, "icr:"+keyPrefix+":"+date).Uint64()
-
-	return (uint64(timestamp) << COUNT_BITS) | count
 }
