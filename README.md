@@ -4,7 +4,8 @@
 
 #### tb_seckill_voucher表中添加了新主键id
 #### 项目并未上传config.yaml配置文件
-``` app:
+``` 
+app:
   env: local # 环境名称
   port: 8081 # 服务监听该端口号
   app_name: gin-app # 应用名称
