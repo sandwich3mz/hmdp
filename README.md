@@ -3,7 +3,7 @@
 #### 使用gin + ent 不完全重构黑马点评项目
 
 #### tb_seckill_voucher表中添加了新主键id
-#### 项目并未上传config.yaml配置文件
+#### 项目需要config.yaml配置文件
 ``` 
 app:
   env: local # 环境名称
