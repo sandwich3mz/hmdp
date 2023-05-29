@@ -36,4 +36,4 @@
 # Go workspace file
 go.work
 *.yaml
-
+log_files/*

@@ -3,12 +3,17 @@ package impl
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"github.com/sirupsen/logrus"
 	"hmdp/ent"
+	"hmdp/ent/seckillvoucher"
 	"hmdp/ent/voucher"
+	"hmdp/ent/voucherorder"
+	"hmdp/global"
 	"hmdp/model"
 	"hmdp/services/voucher_service"
+	"hmdp/tools"
 	"log"
 	"time"
 )
@@ -117,6 +122,77 @@ func (p *pgImpl) AddSeckillVoucher(ctx context.Context, voucher model.Voucher) b
 		return false
 	}
 	return true
+}
+
+func (p *pgImpl) SeckillVoucher(ctx context.Context, voucherId uint64) (int64, error) {
+	// 查询优惠券
+	targetVoucher, err := p.dbClient.SeckillVoucher.Query().
+		Where(seckillvoucher.VoucherIDEQ(voucherId)).
+		Only(context.Background())
+	if err != nil {
+		log.Printf("Failed to find the targetVoucher: %v", err)
+		return -1, err
+	}
+	// 判断秒杀是否开始
+	if !time.Now().After(targetVoucher.BeginTime) {
+		log.Printf("The Lightning Deal hasn't started yet")
+		err = errors.New("the Lightning Deal hasn't started yet")
+		return -1, err
+	}
+
+	// 判断秒杀是否结束
+	if !time.Now().Before(targetVoucher.EndTime) {
+		log.Printf("The Lightning Deal is over")
+		err = errors.New("the Lightning Deal is over")
+		return -1, err
+	}
+
+	// 判断库存是否充足
+	if targetVoucher.Stock <= 0 {
+		log.Printf("There is not enough inventory")
+		err = errors.New("there is not enough inventory")
+		return -1, err
+	}
+
+	// 一人一单
+	userId := global.UserDTO.ID
+	count, err := p.dbClient.VoucherOrder.Query().
+		Where(voucherorder.UserIDEQ(userId)).
+		Count(context.Background())
+	if err != nil {
+		return -1, err
+	} else if count > 0 {
+		err = errors.New("You've already placed an order\n")
+		log.Printf("You've already placed an order\n")
+		return -1, err
+	}
+
+	// 扣减库存
+	isSuccess, err := p.dbClient.Debug().SeckillVoucher.
+		Update().
+		Where(seckillvoucher.And(
+			seckillvoucher.VoucherID(voucherId),
+			seckillvoucher.StockGT(0), // 确保库存 > 0
+		)).
+		AddStock(-1).
+		Save(context.Background())
+	if err != nil || isSuccess < 1 {
+		log.Printf("Failed to update the stock: %v", err)
+		return -1, err
+	}
+
+	// 创建订单
+	orderId := tools.NextId("order")
+	_, err = p.dbClient.VoucherOrder.Create().
+		SetID(orderId).
+		SetUserID(userId).
+		SetVoucherID(voucherId).
+		Save(context.Background())
+	if err != nil {
+		log.Printf("Failed to create vouche order: %v", err)
+		return -1, err
+	}
+	return orderId, nil
 }
 
 func rollback(tx *ent.Tx, err error) error {

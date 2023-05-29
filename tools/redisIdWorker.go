@@ -12,7 +12,7 @@ const (
 )
 
 // NextId 生成订单id
-func NextId(keyPrefix string) uint64 {
+func NextId(keyPrefix string) int64 {
 	client := global.App.Redis
 	// 生成时间戳
 	now := time.Now().UTC()
@@ -26,5 +26,5 @@ func NextId(keyPrefix string) uint64 {
 	ctx := context.Background()
 	count, _ := client.Incr(ctx, "icr:"+keyPrefix+":"+date).Uint64()
 
-	return (uint64(timeStamp) << CountBits) | count
+	return (timeStamp << CountBits) | int64(count)
 }

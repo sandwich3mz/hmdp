@@ -35,6 +35,10 @@ func setupRouter() *gin.Engine {
 		voucher.POST("/", controllers.AddVoucher)
 		voucher.POST("/seckill", controllers.AddSeckillVoucher)
 	}
+	voucherOrder := router.Group("/voucher-order")
+	{
+		voucherOrder.POST("/seckill/:id", controllers.SeckillVoucher)
+	}
 
 	return router
 }

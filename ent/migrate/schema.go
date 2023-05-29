@@ -127,6 +127,25 @@ var (
 		Columns:    TbVoucherColumns,
 		PrimaryKey: []*schema.Column{TbVoucherColumns[0]},
 	}
+	// TbVoucherOrderColumns holds the columns for the "tb_voucher_order" table.
+	TbVoucherOrderColumns = []*schema.Column{
+		{Name: "id", Type: field.TypeInt64, Increment: true},
+		{Name: "user_id", Type: field.TypeUint64},
+		{Name: "voucher_id", Type: field.TypeUint64},
+		{Name: "pay_type", Type: field.TypeInt8, Nullable: true},
+		{Name: "status", Type: field.TypeInt8, Nullable: true},
+		{Name: "pay_time", Type: field.TypeTime, Nullable: true},
+		{Name: "use_time", Type: field.TypeTime, Nullable: true},
+		{Name: "refund_time", Type: field.TypeTime, Nullable: true},
+		{Name: "create_time", Type: field.TypeTime},
+		{Name: "update_time", Type: field.TypeTime},
+	}
+	// TbVoucherOrderTable holds the schema information for the "tb_voucher_order" table.
+	TbVoucherOrderTable = &schema.Table{
+		Name:       "tb_voucher_order",
+		Columns:    TbVoucherOrderColumns,
+		PrimaryKey: []*schema.Column{TbVoucherOrderColumns[0]},
+	}
 	// Tables holds all the tables in the schema.
 	Tables = []*schema.Table{
 		TbBlogTable,
@@ -135,6 +154,7 @@ var (
 		TbShopTypeTable,
 		TbUserTable,
 		TbVoucherTable,
+		TbVoucherOrderTable,
 	}
 )
 
@@ -157,5 +177,8 @@ func init() {
 	}
 	TbVoucherTable.Annotation = &entsql.Annotation{
 		Table: "tb_voucher",
+	}
+	TbVoucherOrderTable.Annotation = &entsql.Annotation{
+		Table: "tb_voucher_order",
 	}
 }

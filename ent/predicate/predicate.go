@@ -23,3 +23,6 @@ type User func(*sql.Selector)
 
 // Voucher is the predicate function for voucher builders.
 type Voucher func(*sql.Selector)
+
+// VoucherOrder is the predicate function for voucherorder builders.
+type VoucherOrder func(*sql.Selector)

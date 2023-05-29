@@ -24,6 +24,8 @@ type Tx struct {
 	User *UserClient
 	// Voucher is the client for interacting with the Voucher builders.
 	Voucher *VoucherClient
+	// VoucherOrder is the client for interacting with the VoucherOrder builders.
+	VoucherOrder *VoucherOrderClient
 
 	// lazily loaded.
 	client     *Client
@@ -161,6 +163,7 @@ func (tx *Tx) init() {
 	tx.ShopType = NewShopTypeClient(tx.config)
 	tx.User = NewUserClient(tx.config)
 	tx.Voucher = NewVoucherClient(tx.config)
+	tx.VoucherOrder = NewVoucherOrderClient(tx.config)
 }
 
 // txDriver wraps the given dialect.Tx with a nop dialect.Driver implementation.

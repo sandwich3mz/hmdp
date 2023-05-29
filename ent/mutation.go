@@ -13,6 +13,7 @@ import (
 	"hmdp/ent/shoptype"
 	"hmdp/ent/user"
 	"hmdp/ent/voucher"
+	"hmdp/ent/voucherorder"
 	"sync"
 	"time"
 
@@ -35,6 +36,7 @@ const (
 	TypeShopType       = "ShopType"
 	TypeUser           = "User"
 	TypeVoucher        = "Voucher"
+	TypeVoucherOrder   = "VoucherOrder"
 )
 
 // BlogMutation represents an operation that mutates the Blog nodes in the graph.
@@ -5171,4 +5173,1003 @@ func (m *VoucherMutation) ResetEdge(name string) error {
 		return nil
 	}
 	return fmt.Errorf("unknown Voucher edge %s", name)
+}
+
+// VoucherOrderMutation represents an operation that mutates the VoucherOrder nodes in the graph.
+type VoucherOrderMutation struct {
+	config
+	op            Op
+	typ           string
+	id            *int64
+	user_id       *uint64
+	adduser_id    *int64
+	voucher_id    *uint64
+	addvoucher_id *int64
+	pay_type      *int8
+	addpay_type   *int8
+	status        *int8
+	addstatus     *int8
+	pay_time      *time.Time
+	use_time      *time.Time
+	refund_time   *time.Time
+	create_time   *time.Time
+	update_time   *time.Time
+	clearedFields map[string]struct{}
+	done          bool
+	oldValue      func(context.Context) (*VoucherOrder, error)
+	predicates    []predicate.VoucherOrder
+}
+
+var _ ent.Mutation = (*VoucherOrderMutation)(nil)
+
+// voucherorderOption allows management of the mutation configuration using functional options.
+type voucherorderOption func(*VoucherOrderMutation)
+
+// newVoucherOrderMutation creates new mutation for the VoucherOrder entity.
+func newVoucherOrderMutation(c config, op Op, opts ...voucherorderOption) *VoucherOrderMutation {
+	m := &VoucherOrderMutation{
+		config:        c,
+		op:            op,
+		typ:           TypeVoucherOrder,
+		clearedFields: make(map[string]struct{}),
+	}
+	for _, opt := range opts {
+		opt(m)
+	}
+	return m
+}
+
+// withVoucherOrderID sets the ID field of the mutation.
+func withVoucherOrderID(id int64) voucherorderOption {
+	return func(m *VoucherOrderMutation) {
+		var (
+			err   error
+			once  sync.Once
+			value *VoucherOrder
+		)
+		m.oldValue = func(ctx context.Context) (*VoucherOrder, error) {
+			once.Do(func() {
+				if m.done {
+					err = errors.New("querying old values post mutation is not allowed")
+				} else {
+					value, err = m.Client().VoucherOrder.Get(ctx, id)
+				}
+			})
+			return value, err
+		}
+		m.id = &id
+	}
+}
+
+// withVoucherOrder sets the old VoucherOrder of the mutation.
+func withVoucherOrder(node *VoucherOrder) voucherorderOption {
+	return func(m *VoucherOrderMutation) {
+		m.oldValue = func(context.Context) (*VoucherOrder, error) {
+			return node, nil
+		}
+		m.id = &node.ID
+	}
+}
+
+// Client returns a new `ent.Client` from the mutation. If the mutation was
+// executed in a transaction (ent.Tx), a transactional client is returned.
+func (m VoucherOrderMutation) Client() *Client {
+	client := &Client{config: m.config}
+	client.init()
+	return client
+}
+
+// Tx returns an `ent.Tx` for mutations that were executed in transactions;
+// it returns an error otherwise.
+func (m VoucherOrderMutation) Tx() (*Tx, error) {
+	if _, ok := m.driver.(*txDriver); !ok {
+		return nil, errors.New("ent: mutation is not running in a transaction")
+	}
+	tx := &Tx{config: m.config}
+	tx.init()
+	return tx, nil
+}
+
+// SetID sets the value of the id field. Note that this
+// operation is only accepted on creation of VoucherOrder entities.
+func (m *VoucherOrderMutation) SetID(id int64) {
+	m.id = &id
+}
+
+// ID returns the ID value in the mutation. Note that the ID is only available
+// if it was provided to the builder or after it was returned from the database.
+func (m *VoucherOrderMutation) ID() (id int64, exists bool) {
+	if m.id == nil {
+		return
+	}
+	return *m.id, true
+}
+
+// IDs queries the database and returns the entity ids that match the mutation's predicate.
+// That means, if the mutation is applied within a transaction with an isolation level such
+// as sql.LevelSerializable, the returned ids match the ids of the rows that will be updated
+// or updated by the mutation.
+func (m *VoucherOrderMutation) IDs(ctx context.Context) ([]int64, error) {
+	switch {
+	case m.op.Is(OpUpdateOne | OpDeleteOne):
+		id, exists := m.ID()
+		if exists {
+			return []int64{id}, nil
+		}
+		fallthrough
+	case m.op.Is(OpUpdate | OpDelete):
+		return m.Client().VoucherOrder.Query().Where(m.predicates...).IDs(ctx)
+	default:
+		return nil, fmt.Errorf("IDs is not allowed on %s operations", m.op)
+	}
+}
+
+// SetUserID sets the "user_id" field.
+func (m *VoucherOrderMutation) SetUserID(u uint64) {
+	m.user_id = &u
+	m.adduser_id = nil
+}
+
+// UserID returns the value of the "user_id" field in the mutation.
+func (m *VoucherOrderMutation) UserID() (r uint64, exists bool) {
+	v := m.user_id
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// OldUserID returns the old "user_id" field's value of the VoucherOrder entity.
+// If the VoucherOrder object wasn't provided to the builder, the object is fetched from the database.
+// An error is returned if the mutation operation is not UpdateOne, or the database query fails.
+func (m *VoucherOrderMutation) OldUserID(ctx context.Context) (v uint64, err error) {
+	if !m.op.Is(OpUpdateOne) {
+		return v, errors.New("OldUserID is only allowed on UpdateOne operations")
+	}
+	if m.id == nil || m.oldValue == nil {
+		return v, errors.New("OldUserID requires an ID field in the mutation")
+	}
+	oldValue, err := m.oldValue(ctx)
+	if err != nil {
+		return v, fmt.Errorf("querying old value for OldUserID: %w", err)
+	}
+	return oldValue.UserID, nil
+}
+
+// AddUserID adds u to the "user_id" field.
+func (m *VoucherOrderMutation) AddUserID(u int64) {
+	if m.adduser_id != nil {
+		*m.adduser_id += u
+	} else {
+		m.adduser_id = &u
+	}
+}
+
+// AddedUserID returns the value that was added to the "user_id" field in this mutation.
+func (m *VoucherOrderMutation) AddedUserID() (r int64, exists bool) {
+	v := m.adduser_id
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// ResetUserID resets all changes to the "user_id" field.
+func (m *VoucherOrderMutation) ResetUserID() {
+	m.user_id = nil
+	m.adduser_id = nil
+}
+
+// SetVoucherID sets the "voucher_id" field.
+func (m *VoucherOrderMutation) SetVoucherID(u uint64) {
+	m.voucher_id = &u
+	m.addvoucher_id = nil
+}
+
+// VoucherID returns the value of the "voucher_id" field in the mutation.
+func (m *VoucherOrderMutation) VoucherID() (r uint64, exists bool) {
+	v := m.voucher_id
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// OldVoucherID returns the old "voucher_id" field's value of the VoucherOrder entity.
+// If the VoucherOrder object wasn't provided to the builder, the object is fetched from the database.
+// An error is returned if the mutation operation is not UpdateOne, or the database query fails.
+func (m *VoucherOrderMutation) OldVoucherID(ctx context.Context) (v uint64, err error) {
+	if !m.op.Is(OpUpdateOne) {
+		return v, errors.New("OldVoucherID is only allowed on UpdateOne operations")
+	}
+	if m.id == nil || m.oldValue == nil {
+		return v, errors.New("OldVoucherID requires an ID field in the mutation")
+	}
+	oldValue, err := m.oldValue(ctx)
+	if err != nil {
+		return v, fmt.Errorf("querying old value for OldVoucherID: %w", err)
+	}
+	return oldValue.VoucherID, nil
+}
+
+// AddVoucherID adds u to the "voucher_id" field.
+func (m *VoucherOrderMutation) AddVoucherID(u int64) {
+	if m.addvoucher_id != nil {
+		*m.addvoucher_id += u
+	} else {
+		m.addvoucher_id = &u
+	}
+}
+
+// AddedVoucherID returns the value that was added to the "voucher_id" field in this mutation.
+func (m *VoucherOrderMutation) AddedVoucherID() (r int64, exists bool) {
+	v := m.addvoucher_id
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// ResetVoucherID resets all changes to the "voucher_id" field.
+func (m *VoucherOrderMutation) ResetVoucherID() {
+	m.voucher_id = nil
+	m.addvoucher_id = nil
+}
+
+// SetPayType sets the "pay_type" field.
+func (m *VoucherOrderMutation) SetPayType(i int8) {
+	m.pay_type = &i
+	m.addpay_type = nil
+}
+
+// PayType returns the value of the "pay_type" field in the mutation.
+func (m *VoucherOrderMutation) PayType() (r int8, exists bool) {
+	v := m.pay_type
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// OldPayType returns the old "pay_type" field's value of the VoucherOrder entity.
+// If the VoucherOrder object wasn't provided to the builder, the object is fetched from the database.
+// An error is returned if the mutation operation is not UpdateOne, or the database query fails.
+func (m *VoucherOrderMutation) OldPayType(ctx context.Context) (v int8, err error) {
+	if !m.op.Is(OpUpdateOne) {
+		return v, errors.New("OldPayType is only allowed on UpdateOne operations")
+	}
+	if m.id == nil || m.oldValue == nil {
+		return v, errors.New("OldPayType requires an ID field in the mutation")
+	}
+	oldValue, err := m.oldValue(ctx)
+	if err != nil {
+		return v, fmt.Errorf("querying old value for OldPayType: %w", err)
+	}
+	return oldValue.PayType, nil
+}
+
+// AddPayType adds i to the "pay_type" field.
+func (m *VoucherOrderMutation) AddPayType(i int8) {
+	if m.addpay_type != nil {
+		*m.addpay_type += i
+	} else {
+		m.addpay_type = &i
+	}
+}
+
+// AddedPayType returns the value that was added to the "pay_type" field in this mutation.
+func (m *VoucherOrderMutation) AddedPayType() (r int8, exists bool) {
+	v := m.addpay_type
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// ClearPayType clears the value of the "pay_type" field.
+func (m *VoucherOrderMutation) ClearPayType() {
+	m.pay_type = nil
+	m.addpay_type = nil
+	m.clearedFields[voucherorder.FieldPayType] = struct{}{}
+}
+
+// PayTypeCleared returns if the "pay_type" field was cleared in this mutation.
+func (m *VoucherOrderMutation) PayTypeCleared() bool {
+	_, ok := m.clearedFields[voucherorder.FieldPayType]
+	return ok
+}
+
+// ResetPayType resets all changes to the "pay_type" field.
+func (m *VoucherOrderMutation) ResetPayType() {
+	m.pay_type = nil
+	m.addpay_type = nil
+	delete(m.clearedFields, voucherorder.FieldPayType)
+}
+
+// SetStatus sets the "status" field.
+func (m *VoucherOrderMutation) SetStatus(i int8) {
+	m.status = &i
+	m.addstatus = nil
+}
+
+// Status returns the value of the "status" field in the mutation.
+func (m *VoucherOrderMutation) Status() (r int8, exists bool) {
+	v := m.status
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// OldStatus returns the old "status" field's value of the VoucherOrder entity.
+// If the VoucherOrder object wasn't provided to the builder, the object is fetched from the database.
+// An error is returned if the mutation operation is not UpdateOne, or the database query fails.
+func (m *VoucherOrderMutation) OldStatus(ctx context.Context) (v int8, err error) {
+	if !m.op.Is(OpUpdateOne) {
+		return v, errors.New("OldStatus is only allowed on UpdateOne operations")
+	}
+	if m.id == nil || m.oldValue == nil {
+		return v, errors.New("OldStatus requires an ID field in the mutation")
+	}
+	oldValue, err := m.oldValue(ctx)
+	if err != nil {
+		return v, fmt.Errorf("querying old value for OldStatus: %w", err)
+	}
+	return oldValue.Status, nil
+}
+
+// AddStatus adds i to the "status" field.
+func (m *VoucherOrderMutation) AddStatus(i int8) {
+	if m.addstatus != nil {
+		*m.addstatus += i
+	} else {
+		m.addstatus = &i
+	}
+}
+
+// AddedStatus returns the value that was added to the "status" field in this mutation.
+func (m *VoucherOrderMutation) AddedStatus() (r int8, exists bool) {
+	v := m.addstatus
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// ClearStatus clears the value of the "status" field.
+func (m *VoucherOrderMutation) ClearStatus() {
+	m.status = nil
+	m.addstatus = nil
+	m.clearedFields[voucherorder.FieldStatus] = struct{}{}
+}
+
+// StatusCleared returns if the "status" field was cleared in this mutation.
+func (m *VoucherOrderMutation) StatusCleared() bool {
+	_, ok := m.clearedFields[voucherorder.FieldStatus]
+	return ok
+}
+
+// ResetStatus resets all changes to the "status" field.
+func (m *VoucherOrderMutation) ResetStatus() {
+	m.status = nil
+	m.addstatus = nil
+	delete(m.clearedFields, voucherorder.FieldStatus)
+}
+
+// SetPayTime sets the "pay_time" field.
+func (m *VoucherOrderMutation) SetPayTime(t time.Time) {
+	m.pay_time = &t
+}
+
+// PayTime returns the value of the "pay_time" field in the mutation.
+func (m *VoucherOrderMutation) PayTime() (r time.Time, exists bool) {
+	v := m.pay_time
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// OldPayTime returns the old "pay_time" field's value of the VoucherOrder entity.
+// If the VoucherOrder object wasn't provided to the builder, the object is fetched from the database.
+// An error is returned if the mutation operation is not UpdateOne, or the database query fails.
+func (m *VoucherOrderMutation) OldPayTime(ctx context.Context) (v time.Time, err error) {
+	if !m.op.Is(OpUpdateOne) {
+		return v, errors.New("OldPayTime is only allowed on UpdateOne operations")
+	}
+	if m.id == nil || m.oldValue == nil {
+		return v, errors.New("OldPayTime requires an ID field in the mutation")
+	}
+	oldValue, err := m.oldValue(ctx)
+	if err != nil {
+		return v, fmt.Errorf("querying old value for OldPayTime: %w", err)
+	}
+	return oldValue.PayTime, nil
+}
+
+// ClearPayTime clears the value of the "pay_time" field.
+func (m *VoucherOrderMutation) ClearPayTime() {
+	m.pay_time = nil
+	m.clearedFields[voucherorder.FieldPayTime] = struct{}{}
+}
+
+// PayTimeCleared returns if the "pay_time" field was cleared in this mutation.
+func (m *VoucherOrderMutation) PayTimeCleared() bool {
+	_, ok := m.clearedFields[voucherorder.FieldPayTime]
+	return ok
+}
+
+// ResetPayTime resets all changes to the "pay_time" field.
+func (m *VoucherOrderMutation) ResetPayTime() {
+	m.pay_time = nil
+	delete(m.clearedFields, voucherorder.FieldPayTime)
+}
+
+// SetUseTime sets the "use_time" field.
+func (m *VoucherOrderMutation) SetUseTime(t time.Time) {
+	m.use_time = &t
+}
+
+// UseTime returns the value of the "use_time" field in the mutation.
+func (m *VoucherOrderMutation) UseTime() (r time.Time, exists bool) {
+	v := m.use_time
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// OldUseTime returns the old "use_time" field's value of the VoucherOrder entity.
+// If the VoucherOrder object wasn't provided to the builder, the object is fetched from the database.
+// An error is returned if the mutation operation is not UpdateOne, or the database query fails.
+func (m *VoucherOrderMutation) OldUseTime(ctx context.Context) (v time.Time, err error) {
+	if !m.op.Is(OpUpdateOne) {
+		return v, errors.New("OldUseTime is only allowed on UpdateOne operations")
+	}
+	if m.id == nil || m.oldValue == nil {
+		return v, errors.New("OldUseTime requires an ID field in the mutation")
+	}
+	oldValue, err := m.oldValue(ctx)
+	if err != nil {
+		return v, fmt.Errorf("querying old value for OldUseTime: %w", err)
+	}
+	return oldValue.UseTime, nil
+}
+
+// ClearUseTime clears the value of the "use_time" field.
+func (m *VoucherOrderMutation) ClearUseTime() {
+	m.use_time = nil
+	m.clearedFields[voucherorder.FieldUseTime] = struct{}{}
+}
+
+// UseTimeCleared returns if the "use_time" field was cleared in this mutation.
+func (m *VoucherOrderMutation) UseTimeCleared() bool {
+	_, ok := m.clearedFields[voucherorder.FieldUseTime]
+	return ok
+}
+
+// ResetUseTime resets all changes to the "use_time" field.
+func (m *VoucherOrderMutation) ResetUseTime() {
+	m.use_time = nil
+	delete(m.clearedFields, voucherorder.FieldUseTime)
+}
+
+// SetRefundTime sets the "refund_time" field.
+func (m *VoucherOrderMutation) SetRefundTime(t time.Time) {
+	m.refund_time = &t
+}
+
+// RefundTime returns the value of the "refund_time" field in the mutation.
+func (m *VoucherOrderMutation) RefundTime() (r time.Time, exists bool) {
+	v := m.refund_time
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// OldRefundTime returns the old "refund_time" field's value of the VoucherOrder entity.
+// If the VoucherOrder object wasn't provided to the builder, the object is fetched from the database.
+// An error is returned if the mutation operation is not UpdateOne, or the database query fails.
+func (m *VoucherOrderMutation) OldRefundTime(ctx context.Context) (v time.Time, err error) {
+	if !m.op.Is(OpUpdateOne) {
+		return v, errors.New("OldRefundTime is only allowed on UpdateOne operations")
+	}
+	if m.id == nil || m.oldValue == nil {
+		return v, errors.New("OldRefundTime requires an ID field in the mutation")
+	}
+	oldValue, err := m.oldValue(ctx)
+	if err != nil {
+		return v, fmt.Errorf("querying old value for OldRefundTime: %w", err)
+	}
+	return oldValue.RefundTime, nil
+}
+
+// ClearRefundTime clears the value of the "refund_time" field.
+func (m *VoucherOrderMutation) ClearRefundTime() {
+	m.refund_time = nil
+	m.clearedFields[voucherorder.FieldRefundTime] = struct{}{}
+}
+
+// RefundTimeCleared returns if the "refund_time" field was cleared in this mutation.
+func (m *VoucherOrderMutation) RefundTimeCleared() bool {
+	_, ok := m.clearedFields[voucherorder.FieldRefundTime]
+	return ok
+}
+
+// ResetRefundTime resets all changes to the "refund_time" field.
+func (m *VoucherOrderMutation) ResetRefundTime() {
+	m.refund_time = nil
+	delete(m.clearedFields, voucherorder.FieldRefundTime)
+}
+
+// SetCreateTime sets the "create_time" field.
+func (m *VoucherOrderMutation) SetCreateTime(t time.Time) {
+	m.create_time = &t
+}
+
+// CreateTime returns the value of the "create_time" field in the mutation.
+func (m *VoucherOrderMutation) CreateTime() (r time.Time, exists bool) {
+	v := m.create_time
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// OldCreateTime returns the old "create_time" field's value of the VoucherOrder entity.
+// If the VoucherOrder object wasn't provided to the builder, the object is fetched from the database.
+// An error is returned if the mutation operation is not UpdateOne, or the database query fails.
+func (m *VoucherOrderMutation) OldCreateTime(ctx context.Context) (v time.Time, err error) {
+	if !m.op.Is(OpUpdateOne) {
+		return v, errors.New("OldCreateTime is only allowed on UpdateOne operations")
+	}
+	if m.id == nil || m.oldValue == nil {
+		return v, errors.New("OldCreateTime requires an ID field in the mutation")
+	}
+	oldValue, err := m.oldValue(ctx)
+	if err != nil {
+		return v, fmt.Errorf("querying old value for OldCreateTime: %w", err)
+	}
+	return oldValue.CreateTime, nil
+}
+
+// ResetCreateTime resets all changes to the "create_time" field.
+func (m *VoucherOrderMutation) ResetCreateTime() {
+	m.create_time = nil
+}
+
+// SetUpdateTime sets the "update_time" field.
+func (m *VoucherOrderMutation) SetUpdateTime(t time.Time) {
+	m.update_time = &t
+}
+
+// UpdateTime returns the value of the "update_time" field in the mutation.
+func (m *VoucherOrderMutation) UpdateTime() (r time.Time, exists bool) {
+	v := m.update_time
+	if v == nil {
+		return
+	}
+	return *v, true
+}
+
+// OldUpdateTime returns the old "update_time" field's value of the VoucherOrder entity.
+// If the VoucherOrder object wasn't provided to the builder, the object is fetched from the database.
+// An error is returned if the mutation operation is not UpdateOne, or the database query fails.
+func (m *VoucherOrderMutation) OldUpdateTime(ctx context.Context) (v time.Time, err error) {
+	if !m.op.Is(OpUpdateOne) {
+		return v, errors.New("OldUpdateTime is only allowed on UpdateOne operations")
+	}
+	if m.id == nil || m.oldValue == nil {
+		return v, errors.New("OldUpdateTime requires an ID field in the mutation")
+	}
+	oldValue, err := m.oldValue(ctx)
+	if err != nil {
+		return v, fmt.Errorf("querying old value for OldUpdateTime: %w", err)
+	}
+	return oldValue.UpdateTime, nil
+}
+
+// ResetUpdateTime resets all changes to the "update_time" field.
+func (m *VoucherOrderMutation) ResetUpdateTime() {
+	m.update_time = nil
+}
+
+// Where appends a list predicates to the VoucherOrderMutation builder.
+func (m *VoucherOrderMutation) Where(ps ...predicate.VoucherOrder) {
+	m.predicates = append(m.predicates, ps...)
+}
+
+// WhereP appends storage-level predicates to the VoucherOrderMutation builder. Using this method,
+// users can use type-assertion to append predicates that do not depend on any generated package.
+func (m *VoucherOrderMutation) WhereP(ps ...func(*sql.Selector)) {
+	p := make([]predicate.VoucherOrder, len(ps))
+	for i := range ps {
+		p[i] = ps[i]
+	}
+	m.Where(p...)
+}
+
+// Op returns the operation name.
+func (m *VoucherOrderMutation) Op() Op {
+	return m.op
+}
+
+// SetOp allows setting the mutation operation.
+func (m *VoucherOrderMutation) SetOp(op Op) {
+	m.op = op
+}
+
+// Type returns the node type of this mutation (VoucherOrder).
+func (m *VoucherOrderMutation) Type() string {
+	return m.typ
+}
+
+// Fields returns all fields that were changed during this mutation. Note that in
+// order to get all numeric fields that were incremented/decremented, call
+// AddedFields().
+func (m *VoucherOrderMutation) Fields() []string {
+	fields := make([]string, 0, 9)
+	if m.user_id != nil {
+		fields = append(fields, voucherorder.FieldUserID)
+	}
+	if m.voucher_id != nil {
+		fields = append(fields, voucherorder.FieldVoucherID)
+	}
+	if m.pay_type != nil {
+		fields = append(fields, voucherorder.FieldPayType)
+	}
+	if m.status != nil {
+		fields = append(fields, voucherorder.FieldStatus)
+	}
+	if m.pay_time != nil {
+		fields = append(fields, voucherorder.FieldPayTime)
+	}
+	if m.use_time != nil {
+		fields = append(fields, voucherorder.FieldUseTime)
+	}
+	if m.refund_time != nil {
+		fields = append(fields, voucherorder.FieldRefundTime)
+	}
+	if m.create_time != nil {
+		fields = append(fields, voucherorder.FieldCreateTime)
+	}
+	if m.update_time != nil {
+		fields = append(fields, voucherorder.FieldUpdateTime)
+	}
+	return fields
+}
+
+// Field returns the value of a field with the given name. The second boolean
+// return value indicates that this field was not set, or was not defined in the
+// schema.
+func (m *VoucherOrderMutation) Field(name string) (ent.Value, bool) {
+	switch name {
+	case voucherorder.FieldUserID:
+		return m.UserID()
+	case voucherorder.FieldVoucherID:
+		return m.VoucherID()
+	case voucherorder.FieldPayType:
+		return m.PayType()
+	case voucherorder.FieldStatus:
+		return m.Status()
+	case voucherorder.FieldPayTime:
+		return m.PayTime()
+	case voucherorder.FieldUseTime:
+		return m.UseTime()
+	case voucherorder.FieldRefundTime:
+		return m.RefundTime()
+	case voucherorder.FieldCreateTime:
+		return m.CreateTime()
+	case voucherorder.FieldUpdateTime:
+		return m.UpdateTime()
+	}
+	return nil, false
+}
+
+// OldField returns the old value of the field from the database. An error is
+// returned if the mutation operation is not UpdateOne, or the query to the
+// database failed.
+func (m *VoucherOrderMutation) OldField(ctx context.Context, name string) (ent.Value, error) {
+	switch name {
+	case voucherorder.FieldUserID:
+		return m.OldUserID(ctx)
+	case voucherorder.FieldVoucherID:
+		return m.OldVoucherID(ctx)
+	case voucherorder.FieldPayType:
+		return m.OldPayType(ctx)
+	case voucherorder.FieldStatus:
+		return m.OldStatus(ctx)
+	case voucherorder.FieldPayTime:
+		return m.OldPayTime(ctx)
+	case voucherorder.FieldUseTime:
+		return m.OldUseTime(ctx)
+	case voucherorder.FieldRefundTime:
+		return m.OldRefundTime(ctx)
+	case voucherorder.FieldCreateTime:
+		return m.OldCreateTime(ctx)
+	case voucherorder.FieldUpdateTime:
+		return m.OldUpdateTime(ctx)
+	}
+	return nil, fmt.Errorf("unknown VoucherOrder field %s", name)
+}
+
+// SetField sets the value of a field with the given name. It returns an error if
+// the field is not defined in the schema, or if the type mismatched the field
+// type.
+func (m *VoucherOrderMutation) SetField(name string, value ent.Value) error {
+	switch name {
+	case voucherorder.FieldUserID:
+		v, ok := value.(uint64)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.SetUserID(v)
+		return nil
+	case voucherorder.FieldVoucherID:
+		v, ok := value.(uint64)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.SetVoucherID(v)
+		return nil
+	case voucherorder.FieldPayType:
+		v, ok := value.(int8)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.SetPayType(v)
+		return nil
+	case voucherorder.FieldStatus:
+		v, ok := value.(int8)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.SetStatus(v)
+		return nil
+	case voucherorder.FieldPayTime:
+		v, ok := value.(time.Time)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.SetPayTime(v)
+		return nil
+	case voucherorder.FieldUseTime:
+		v, ok := value.(time.Time)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.SetUseTime(v)
+		return nil
+	case voucherorder.FieldRefundTime:
+		v, ok := value.(time.Time)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.SetRefundTime(v)
+		return nil
+	case voucherorder.FieldCreateTime:
+		v, ok := value.(time.Time)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.SetCreateTime(v)
+		return nil
+	case voucherorder.FieldUpdateTime:
+		v, ok := value.(time.Time)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.SetUpdateTime(v)
+		return nil
+	}
+	return fmt.Errorf("unknown VoucherOrder field %s", name)
+}
+
+// AddedFields returns all numeric fields that were incremented/decremented during
+// this mutation.
+func (m *VoucherOrderMutation) AddedFields() []string {
+	var fields []string
+	if m.adduser_id != nil {
+		fields = append(fields, voucherorder.FieldUserID)
+	}
+	if m.addvoucher_id != nil {
+		fields = append(fields, voucherorder.FieldVoucherID)
+	}
+	if m.addpay_type != nil {
+		fields = append(fields, voucherorder.FieldPayType)
+	}
+	if m.addstatus != nil {
+		fields = append(fields, voucherorder.FieldStatus)
+	}
+	return fields
+}
+
+// AddedField returns the numeric value that was incremented/decremented on a field
+// with the given name. The second boolean return value indicates that this field
+// was not set, or was not defined in the schema.
+func (m *VoucherOrderMutation) AddedField(name string) (ent.Value, bool) {
+	switch name {
+	case voucherorder.FieldUserID:
+		return m.AddedUserID()
+	case voucherorder.FieldVoucherID:
+		return m.AddedVoucherID()
+	case voucherorder.FieldPayType:
+		return m.AddedPayType()
+	case voucherorder.FieldStatus:
+		return m.AddedStatus()
+	}
+	return nil, false
+}
+
+// AddField adds the value to the field with the given name. It returns an error if
+// the field is not defined in the schema, or if the type mismatched the field
+// type.
+func (m *VoucherOrderMutation) AddField(name string, value ent.Value) error {
+	switch name {
+	case voucherorder.FieldUserID:
+		v, ok := value.(int64)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.AddUserID(v)
+		return nil
+	case voucherorder.FieldVoucherID:
+		v, ok := value.(int64)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.AddVoucherID(v)
+		return nil
+	case voucherorder.FieldPayType:
+		v, ok := value.(int8)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.AddPayType(v)
+		return nil
+	case voucherorder.FieldStatus:
+		v, ok := value.(int8)
+		if !ok {
+			return fmt.Errorf("unexpected type %T for field %s", value, name)
+		}
+		m.AddStatus(v)
+		return nil
+	}
+	return fmt.Errorf("unknown VoucherOrder numeric field %s", name)
+}
+
+// ClearedFields returns all nullable fields that were cleared during this
+// mutation.
+func (m *VoucherOrderMutation) ClearedFields() []string {
+	var fields []string
+	if m.FieldCleared(voucherorder.FieldPayType) {
+		fields = append(fields, voucherorder.FieldPayType)
+	}
+	if m.FieldCleared(voucherorder.FieldStatus) {
+		fields = append(fields, voucherorder.FieldStatus)
+	}
+	if m.FieldCleared(voucherorder.FieldPayTime) {
+		fields = append(fields, voucherorder.FieldPayTime)
+	}
+	if m.FieldCleared(voucherorder.FieldUseTime) {
+		fields = append(fields, voucherorder.FieldUseTime)
+	}
+	if m.FieldCleared(voucherorder.FieldRefundTime) {
+		fields = append(fields, voucherorder.FieldRefundTime)
+	}
+	return fields
+}
+
+// FieldCleared returns a boolean indicating if a field with the given name was
+// cleared in this mutation.
+func (m *VoucherOrderMutation) FieldCleared(name string) bool {
+	_, ok := m.clearedFields[name]
+	return ok
+}
+
+// ClearField clears the value of the field with the given name. It returns an
+// error if the field is not defined in the schema.
+func (m *VoucherOrderMutation) ClearField(name string) error {
+	switch name {
+	case voucherorder.FieldPayType:
+		m.ClearPayType()
+		return nil
+	case voucherorder.FieldStatus:
+		m.ClearStatus()
+		return nil
+	case voucherorder.FieldPayTime:
+		m.ClearPayTime()
+		return nil
+	case voucherorder.FieldUseTime:
+		m.ClearUseTime()
+		return nil
+	case voucherorder.FieldRefundTime:
+		m.ClearRefundTime()
+		return nil
+	}
+	return fmt.Errorf("unknown VoucherOrder nullable field %s", name)
+}
+
+// ResetField resets all changes in the mutation for the field with the given name.
+// It returns an error if the field is not defined in the schema.
+func (m *VoucherOrderMutation) ResetField(name string) error {
+	switch name {
+	case voucherorder.FieldUserID:
+		m.ResetUserID()
+		return nil
+	case voucherorder.FieldVoucherID:
+		m.ResetVoucherID()
+		return nil
+	case voucherorder.FieldPayType:
+		m.ResetPayType()
+		return nil
+	case voucherorder.FieldStatus:
+		m.ResetStatus()
+		return nil
+	case voucherorder.FieldPayTime:
+		m.ResetPayTime()
+		return nil
+	case voucherorder.FieldUseTime:
+		m.ResetUseTime()
+		return nil
+	case voucherorder.FieldRefundTime:
+		m.ResetRefundTime()
+		return nil
+	case voucherorder.FieldCreateTime:
+		m.ResetCreateTime()
+		return nil
+	case voucherorder.FieldUpdateTime:
+		m.ResetUpdateTime()
+		return nil
+	}
+	return fmt.Errorf("unknown VoucherOrder field %s", name)
+}
+
+// AddedEdges returns all edge names that were set/added in this mutation.
+func (m *VoucherOrderMutation) AddedEdges() []string {
+	edges := make([]string, 0, 0)
+	return edges
+}
+
+// AddedIDs returns all IDs (to other nodes) that were added for the given edge
+// name in this mutation.
+func (m *VoucherOrderMutation) AddedIDs(name string) []ent.Value {
+	return nil
+}
+
+// RemovedEdges returns all edge names that were removed in this mutation.
+func (m *VoucherOrderMutation) RemovedEdges() []string {
+	edges := make([]string, 0, 0)
+	return edges
+}
+
+// RemovedIDs returns all IDs (to other nodes) that were removed for the edge with
+// the given name in this mutation.
+func (m *VoucherOrderMutation) RemovedIDs(name string) []ent.Value {
+	return nil
+}
+
+// ClearedEdges returns all edge names that were cleared in this mutation.
+func (m *VoucherOrderMutation) ClearedEdges() []string {
+	edges := make([]string, 0, 0)
+	return edges
+}
+
+// EdgeCleared returns a boolean which indicates if the edge with the given name
+// was cleared in this mutation.
+func (m *VoucherOrderMutation) EdgeCleared(name string) bool {
+	return false
+}
+
+// ClearEdge clears the value of the edge with the given name. It returns an error
+// if that edge is not defined in the schema.
+func (m *VoucherOrderMutation) ClearEdge(name string) error {
+	return fmt.Errorf("unknown VoucherOrder unique edge %s", name)
+}
+
+// ResetEdge resets all changes to the edge with the given name in this mutation.
+// It returns an error if the edge is not defined in the schema.
+func (m *VoucherOrderMutation) ResetEdge(name string) error {
+	return fmt.Errorf("unknown VoucherOrder edge %s", name)
 }

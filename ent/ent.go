@@ -12,6 +12,7 @@ import (
 	"hmdp/ent/shoptype"
 	"hmdp/ent/user"
 	"hmdp/ent/voucher"
+	"hmdp/ent/voucherorder"
 	"reflect"
 	"sync"
 
@@ -84,6 +85,7 @@ func checkColumn(table, column string) error {
 			shoptype.Table:       shoptype.ValidColumn,
 			user.Table:           user.ValidColumn,
 			voucher.Table:        voucher.ValidColumn,
+			voucherorder.Table:   voucherorder.ValidColumn,
 		})
 	})
 	return columnCheck(table, column)

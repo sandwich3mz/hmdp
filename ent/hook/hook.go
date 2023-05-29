@@ -80,6 +80,18 @@ func (f VoucherFunc) Mutate(ctx context.Context, m ent.Mutation) (ent.Value, err
 	return nil, fmt.Errorf("unexpected mutation type %T. expect *ent.VoucherMutation", m)
 }
 
+// The VoucherOrderFunc type is an adapter to allow the use of ordinary
+// function as VoucherOrder mutator.
+type VoucherOrderFunc func(context.Context, *ent.VoucherOrderMutation) (ent.Value, error)
+
+// Mutate calls f(ctx, m).
+func (f VoucherOrderFunc) Mutate(ctx context.Context, m ent.Mutation) (ent.Value, error) {
+	if mv, ok := m.(*ent.VoucherOrderMutation); ok {
+		return f(ctx, mv)
+	}
+	return nil, fmt.Errorf("unexpected mutation type %T. expect *ent.VoucherOrderMutation", m)
+}
+
 // Condition is a hook condition function.
 type Condition func(context.Context, ent.Mutation) bool
 

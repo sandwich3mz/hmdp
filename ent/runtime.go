@@ -9,6 +9,7 @@ import (
 	"hmdp/ent/shoptype"
 	"hmdp/ent/user"
 	"hmdp/ent/voucher"
+	"hmdp/ent/voucherorder"
 	"time"
 )
 
@@ -50,4 +51,14 @@ func init() {
 	voucherDescUpdateTime := voucherFields[10].Descriptor()
 	// voucher.DefaultUpdateTime holds the default value on creation for the update_time field.
 	voucher.DefaultUpdateTime = voucherDescUpdateTime.Default.(time.Time)
+	voucherorderFields := schema.VoucherOrder{}.Fields()
+	_ = voucherorderFields
+	// voucherorderDescCreateTime is the schema descriptor for create_time field.
+	voucherorderDescCreateTime := voucherorderFields[8].Descriptor()
+	// voucherorder.DefaultCreateTime holds the default value on creation for the create_time field.
+	voucherorder.DefaultCreateTime = voucherorderDescCreateTime.Default.(time.Time)
+	// voucherorderDescUpdateTime is the schema descriptor for update_time field.
+	voucherorderDescUpdateTime := voucherorderFields[9].Descriptor()
+	// voucherorder.DefaultUpdateTime holds the default value on creation for the update_time field.
+	voucherorder.DefaultUpdateTime = voucherorderDescUpdateTime.Default.(time.Time)
 }
