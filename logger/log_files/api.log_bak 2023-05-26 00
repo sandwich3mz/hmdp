@@ -1,0 +1,76 @@
+2023-05-26 11:02:53 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 11:02:53 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 11:07:27 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 11:07:27 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 12:00:11 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 12:00:11 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 12:02:00 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 12:02:00 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 12:04:19 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 12:04:19 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 12:05:09 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 12:05:09 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 12:05:29 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 12:05:29 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 12:07:40 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 12:07:40 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 12:09:47 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 12:09:47 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 12:17:59 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 12:17:59 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 12:19:42 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 12:19:42 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 12:20:16 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 12:20:16 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:10:40 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:10:40 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:24:29 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:24:29 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:34:32 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:34:32 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:36:17 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:36:17 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:46:13 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:46:14 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:46:17 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:46:17 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:46:37 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:46:37 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:46:59 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:46:59 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:48:49 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:48:49 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:52:32 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:52:32 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 21:59:29 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 21:59:29 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 22:11:06 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 22:11:06 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 22:11:44 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 22:11:44 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 22:14:17 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 22:14:17 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 22:18:12 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 22:18:12 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 22:19:34 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 22:19:34 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 23:12:54 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 23:12:54 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 23:14:04 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 23:14:04 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 23:14:33 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 23:14:33 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 23:17:21 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 23:17:21 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 23:18:57 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 23:18:57 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 23:19:36 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 23:19:36 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 23:27:02 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 23:27:02 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 23:32:35 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 23:32:35 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 23:33:14 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 23:33:14 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-26 23:33:21 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-26 23:33:21 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local

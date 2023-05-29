@@ -1,0 +1,93 @@
+2023-05-29 14:59:12 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 14:59:12 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:01:37 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:01:37 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:08:27 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:08:27 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:08:54 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:08:54 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:12:07 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:12:07 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:20:52 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:20:52 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:44:44 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:44:44 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:47:07 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:47:07 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:47:21 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:47:21 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:48:37 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:48:37 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:50:34 [pg_impl.go]-[QueryVoucherOfShop]-[42][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_order_get_more' in 'field list'
+2023-05-29 15:50:46 [pg_impl.go]-[QueryVoucherOfShop]-[42][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_order_get_more' in 'field list'
+2023-05-29 15:54:44 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:54:44 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:55:16 [pg_impl.go]-[QueryVoucherOfShop]-[42][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_order_get_more' in 'field list'
+2023-05-29 15:55:50 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 15:55:50 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 15:56:01 [pg_impl.go]-[QueryVoucherOfShop]-[42][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_order_get_more' in 'field list'
+2023-05-29 16:01:24 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:01:24 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:02:42 [pg_impl.go]-[QueryVoucherOfShop]-[42][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_order_get_more' in 'field list'
+2023-05-29 16:08:43 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:08:44 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:08:48 [pg_impl.go]-[QueryVoucherOfShop]-[42][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_order_get_more' in 'field list'
+2023-05-29 16:09:31 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:09:31 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:10:05 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:10:05 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:10:09 [pg_impl.go]-[QueryVoucherOfShop]-[42][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_order_get_more' in 'field list'
+2023-05-29 16:12:08 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:12:08 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:12:10 [pg_impl.go]-[QueryVoucherOfShop]-[42][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_get_more' in 'field list'
+2023-05-29 16:12:59 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:12:59 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:13:02 [pg_impl.go]-[QueryVoucherOfShop]-[42][36m [INFO] [0mError 1054 (42S22): Unknown column 'tb_seckill_voucher.voucher_order_get_more' in 'field list'
+2023-05-29 16:40:28 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:40:28 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:42:21 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:42:21 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:48:17 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:48:17 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:50:34 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:50:34 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:52:57 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:52:57 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:53:41 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:53:41 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:55:28 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:55:28 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 16:57:12 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 16:57:12 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 17:00:49 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 17:00:49 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 17:01:43 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 17:01:43 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 17:53:22 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 17:53:22 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 18:17:07 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 18:17:07 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 18:26:52 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 18:26:52 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 18:28:22 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 18:28:23 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 18:37:02 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 18:37:02 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 19:01:47 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 19:01:47 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 19:03:59 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 19:03:59 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 20:15:25 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 20:15:25 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 20:18:48 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 20:18:48 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 20:19:04 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 20:19:04 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 20:19:40 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 20:19:40 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 20:20:52 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 20:20:52 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 21:09:31 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 21:09:31 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-05-29 21:10:23 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-05-29 21:10:23 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
