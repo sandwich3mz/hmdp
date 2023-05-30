@@ -160,11 +160,11 @@ func (p *pgImpl) SeckillVoucher(ctx context.Context, voucherId uint64) (int64, e
 	lock.Lock()
 	defer lock.Unlock()
 
-	orderId, err := p.createVoucherOrder(ctx, voucherId)
+	orderId, err := p.createVoucherOrder(voucherId)
 	return orderId, err
 }
 
-func (p *pgImpl) createVoucherOrder(ctx context.Context, voucherId uint64) (int64, error) {
+func (p *pgImpl) createVoucherOrder(voucherId uint64) (int64, error) {
 	// 一人一单
 	userId := global.UserDTO.ID
 	tx, err := p.dbClient.Tx(context.Background())
