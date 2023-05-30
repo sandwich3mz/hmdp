@@ -15,12 +15,15 @@ import (
 	"hmdp/services/voucher_service"
 	"hmdp/tools"
 	"log"
+	"sync"
 	"time"
 )
 
 type pgImpl struct {
 	dbClient *ent.Client
 }
+
+var lock sync.Mutex
 
 func NewPgImpl(dbClient *ent.Client) voucher_service.Repository {
 	return &pgImpl{
@@ -154,8 +157,21 @@ func (p *pgImpl) SeckillVoucher(ctx context.Context, voucherId uint64) (int64, e
 		return -1, err
 	}
 
+	lock.Lock()
+	defer lock.Unlock()
+
+	orderId, err := p.createVoucherOrder(ctx, voucherId)
+	return orderId, err
+}
+
+func (p *pgImpl) createVoucherOrder(ctx context.Context, voucherId uint64) (int64, error) {
 	// 一人一单
 	userId := global.UserDTO.ID
+	tx, err := p.dbClient.Tx(context.Background())
+	if err != nil {
+		return -1, err
+	}
+	// 查询是否下过单
 	count, err := p.dbClient.VoucherOrder.Query().
 		Where(voucherorder.UserIDEQ(userId)).
 		Count(context.Background())
@@ -168,8 +184,7 @@ func (p *pgImpl) SeckillVoucher(ctx context.Context, voucherId uint64) (int64, e
 	}
 
 	// 扣减库存
-	isSuccess, err := p.dbClient.Debug().SeckillVoucher.
-		Update().
+	isSuccess, err := tx.SeckillVoucher.Update().
 		Where(seckillvoucher.And(
 			seckillvoucher.VoucherID(voucherId),
 			seckillvoucher.StockGT(0), // 确保库存 > 0
@@ -183,7 +198,7 @@ func (p *pgImpl) SeckillVoucher(ctx context.Context, voucherId uint64) (int64, e
 
 	// 创建订单
 	orderId := tools.NextId("order")
-	_, err = p.dbClient.VoucherOrder.Create().
+	_, err = tx.VoucherOrder.Create().
 		SetID(orderId).
 		SetUserID(userId).
 		SetVoucherID(voucherId).
