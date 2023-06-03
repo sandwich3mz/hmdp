@@ -37,3 +37,4 @@
 go.work
 *.yaml
 log_files/*
+*.log

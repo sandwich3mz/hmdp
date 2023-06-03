@@ -2,14 +2,19 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"hmdp/config"
+	"golang.org/x/sync/errgroup"
 	"hmdp/controllers"
 	"log"
+	"net/http"
 )
 
-func setupRouter() *gin.Engine {
-	router := gin.Default()
+var (
+	g errgroup.Group
+)
 
+func setupRouter() http.Handler {
+	router := gin.New()
+	router.Use(gin.Recovery())
 	blog := router.Group("/blog")
 	{
 		blog.GET("/hot", controllers.QueryHotBlog)
@@ -45,9 +50,23 @@ func setupRouter() *gin.Engine {
 
 // RunServer 启动服务器
 func RunServer() {
-	ginServer := setupRouter()
-	err := ginServer.Run(":" + config.Conf.App.Port)
-	if err != nil {
-		log.Printf("Failed to run the ginServer: %v", err)
+	server01 := &http.Server{
+		Addr:    ":8081",
+		Handler: setupRouter(),
+	}
+	server02 := &http.Server{
+		Addr:    ":8082",
+		Handler: setupRouter(),
+	}
+	g.Go(func() error {
+		log.Printf("启动8081端口")
+		return server01.ListenAndServe()
+	})
+	g.Go(func() error {
+		log.Printf("启动8082端口")
+		return server02.ListenAndServe()
+	})
+	if err := g.Wait(); err != nil {
+		log.Fatal(err)
 	}
 }

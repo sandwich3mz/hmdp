@@ -1,0 +1,57 @@
+2023-06-02 10:04:24 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:04:32 [redis.go]-[InitializeRedis]-[20][37m [DEBUG] [0mRedis connect ping failed, err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2023-06-02 10:04:32 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:09:36 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:09:44 [redis.go]-[InitializeRedis]-[20][37m [DEBUG] [0mRedis connect ping failed, err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2023-06-02 10:09:44 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:10:52 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:11:00 [redis.go]-[InitializeRedis]-[20][37m [DEBUG] [0mRedis connect ping failed, err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2023-06-02 10:11:00 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:12:43 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:12:51 [redis.go]-[InitializeRedis]-[20][37m [DEBUG] [0mRedis connect ping failed, err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2023-06-02 10:12:51 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:13:48 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:13:56 [redis.go]-[InitializeRedis]-[20][37m [DEBUG] [0mRedis connect ping failed, err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2023-06-02 10:13:56 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:14:41 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:15:51 [redis.go]-[InitializeRedis]-[20][37m [DEBUG] [0mRedis connect ping failed, err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2023-06-02 10:15:55 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:16:04 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:16:28 [redis.go]-[InitializeRedis]-[20][37m [DEBUG] [0mRedis connect ping failed, err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2023-06-02 10:16:28 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:18:54 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:20:56 [redis.go]-[InitializeRedis]-[20][37m [DEBUG] [0mRedis connect ping failed, err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2023-06-02 10:20:56 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:21:09 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:21:17 [redis.go]-[InitializeRedis]-[20][37m [DEBUG] [0mRedis connect ping failed, err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2023-06-02 10:21:17 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:33:30 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:33:38 [redis.go]-[InitializeRedis]-[20][37m [DEBUG] [0mRedis connect ping failed, err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+2023-06-02 10:33:38 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:39:38 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:42:30 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:42:52 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:45:03 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:45:03 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:48:11 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:48:11 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 10:52:24 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 10:52:24 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 11:15:37 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 11:15:37 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 11:17:23 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 11:17:23 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 11:22:18 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 11:22:18 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 11:23:07 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 11:23:07 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 11:25:18 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 11:25:18 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 11:33:03 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 11:33:03 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 14:13:07 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 14:13:07 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 14:18:00 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 14:18:00 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local
+2023-06-02 21:40:14 [logger.go]-[InitLog]-[24][37m [DEBUG] [0m[INIT] init log success
+2023-06-02 21:40:14 [db.go]-[InitializeDB]-[15][37m [DEBUG] [0mdsn: root:123456@tcp(127.0.0.1:3307)/hmdp?charset=utf8mb4&parseTime=True&loc=Local

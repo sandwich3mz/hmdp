@@ -15,7 +15,7 @@ import (
 	"hmdp/services/voucher_service"
 	"hmdp/tools"
 	"log"
-	"sync"
+	"strconv"
 	"time"
 )
 
@@ -23,7 +23,7 @@ type pgImpl struct {
 	dbClient *ent.Client
 }
 
-var lock sync.Mutex
+// var lock sync.Mutex
 
 func NewPgImpl(dbClient *ent.Client) voucher_service.Repository {
 	return &pgImpl{
@@ -157,9 +157,20 @@ func (p *pgImpl) SeckillVoucher(ctx context.Context, voucherId uint64) (int64, e
 		return -1, err
 	}
 
-	lock.Lock()
-	defer lock.Unlock()
-
+	//lock.Lock()
+	//defer lock.Unlock()
+	client := global.App.Redis
+	userId := global.UserDTO.ID
+	key := "lock:order:" + strconv.Itoa(int(userId))
+	dispersedLock := tools.NewDispersedLock(client, key, 10)
+	isSuccess, err := dispersedLock.TryLock(ctx)
+	if err != nil {
+		return -1, err
+	}
+	if !isSuccess {
+		return -1, nil
+	}
+	defer dispersedLock.UnLock(ctx)
 	orderId, err := p.createVoucherOrder(voucherId)
 	return orderId, err
 }
@@ -195,7 +206,6 @@ func (p *pgImpl) createVoucherOrder(voucherId uint64) (int64, error) {
 		log.Printf("Failed to update the stock: %v", err)
 		return -1, err
 	}
-
 	// 创建订单
 	orderId := tools.NextId("order")
 	_, err = tx.VoucherOrder.Create().
@@ -205,6 +215,11 @@ func (p *pgImpl) createVoucherOrder(voucherId uint64) (int64, error) {
 		Save(context.Background())
 	if err != nil {
 		log.Printf("Failed to create vouche order: %v", err)
+		return -1, err
+	}
+	err = tx.Commit()
+	if err != nil {
+		log.Printf("Failed to commit the tx: %v", err)
 		return -1, err
 	}
 	return orderId, nil

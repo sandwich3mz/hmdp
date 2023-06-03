@@ -75,7 +75,7 @@ func (p *pgImpl) queryWithPassThrough(ctx context.Context, id string) (*ent.Shop
 }
 
 // 互斥锁解决缓存击穿
-func (p *pgImpl) queryWithMutex(ctx context.Context, id string) (*ent.Shop, error) {
+/*func (p *pgImpl) queryWithMutex(ctx context.Context, id string) (*ent.Shop, error) {
 	key := tools.CacheShopKey + id
 	client := global.App.Redis
 	// 查询店铺缓存
@@ -126,10 +126,10 @@ func (p *pgImpl) queryWithMutex(ctx context.Context, id string) (*ent.Shop, erro
 	client.Set(context.Background(), key, marshal, tools.CacheShopTtl*time.Minute)
 	defer tools.UnLock(key)
 	return res, nil
-}
+}*/
 
 // 使用逻辑过期解决缓存击穿
-func (p *pgImpl) queryWithLogicalExpire(ctx context.Context, id string) (*ent.Shop, error) {
+/*func (p *pgImpl) queryWithLogicalExpire(ctx context.Context, id string) (*ent.Shop, error) {
 	key := tools.CacheShopKey + id
 	client := global.App.Redis
 	// 查询缓存
@@ -175,7 +175,7 @@ func (p *pgImpl) queryWithLogicalExpire(ctx context.Context, id string) (*ent.Sh
 		defer tools.UnLock(lockKey)
 	}
 	return &shopData, nil
-}
+}*/
 
 // 缓存预热\重建缓存
 func (p *pgImpl) saveShop2Redis(ctx context.Context, id int64, expireSeconds int64) {

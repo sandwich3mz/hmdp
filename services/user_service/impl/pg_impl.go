@@ -3,6 +3,7 @@ package impl
 import (
 	"context"
 	"encoding/base64"
+	"github.com/go-eden/routine"
 	"github.com/google/uuid"
 	"github.com/jinzhu/copier"
 	"github.com/mitchellh/mapstructure"
@@ -50,6 +51,8 @@ func (p *pgImpl) SendCode(ctx context.Context, phone string) {
 	log.Println("验证码:" + strconv.Itoa(code))
 
 }
+
+var nameVar = routine.NewLocalStorage()
 
 func (p *pgImpl) Login(ctx context.Context, loginForm dto.LoginFormDTO) string {
 	client := global.App.Redis
